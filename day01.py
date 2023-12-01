@@ -1,7 +1,8 @@
 import os
 import re
+import time
 
-
+t1 = time.perf_counter()
 INPUTS_DIR = os.path.join(os.path.dirname(__file__), "inputs")
 
 # Part #1
@@ -41,3 +42,6 @@ translated = [
 ]
 real_calibration_values = [int(num[0] + num[-1]) for num in translated]
 print(f"Answer #2: {sum(real_calibration_values)}")
+t2 = time.perf_counter()
+
+print(f"Execution time: {t2 - t1}")
