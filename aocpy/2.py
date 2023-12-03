@@ -67,6 +67,7 @@ def solve():
         if max_colors_bag <= maximum_cubes
     )
     print(f"Answer #1: {total_valid_game_ids}")
+    assert total_valid_game_ids == 2265
 
     # Part #2
     powers = [
@@ -74,3 +75,4 @@ def solve():
         for reveals in max_colors_in_game
     ]
     print(f"Answer #2: {sum(powers)}")
+    assert sum(powers) == 64097

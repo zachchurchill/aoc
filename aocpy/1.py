@@ -15,6 +15,7 @@ def solve():
     ]
     first_and_last_concat = [int(num[0] + num[-1]) for num in numbers_from_values]
     print(f"Answer #1: {sum(first_and_last_concat)}")
+    assert sum(first_and_last_concat) == 55477
 
     # Part #2
     number_words = {
@@ -43,3 +44,4 @@ def solve():
     ]
     real_calibration_values = [int(num[0] + num[-1]) for num in translated]
     print(f"Answer #2: {sum(real_calibration_values)}")
+    assert sum(real_calibration_values) == 54431
