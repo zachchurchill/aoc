@@ -1,0 +1,16 @@
+{
+  "name": "AOC2024",
+  "version": "1.0.0",
+  "description": "Advent of Code 2024",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachchurchill/aoc.git"
+  },
+  "author": "Zach Churchill",
+  "license": "ISC",
+  "homepage": "https://github.com/zachchurchill/aoc#readme"
+}
