@@ -7,6 +7,7 @@ import fs from "node:fs";
 const data = fs.readFileSync("./inputs/1.txt", "utf8").trim();
 const locationIds = data.split("\n").map(line => line.split(/\s+/));
 
+// Part 1
 const leftLocationIds = [];
 const rightLocationIds = [];
 for (const [ left, right ] of locationIds) {
@@ -19,10 +20,9 @@ rightLocationIds.sort();
 const totalDistance = leftLocationIds
   .map((locationId, idx) => Math.abs(locationId - rightLocationIds[idx]))
   .reduce((x, y) => x + y);
-
 console.log(`Part 1 answer: ${totalDistance}`);
 
-// Construct a map with the values as keys & occurences summed as values then compare/iterate
+// Part 2
 const rightIds = new Map();
 for (const el of rightLocationIds) {
   rightIds.set(el, (rightIds.get(el) ?? 0) + 1);
