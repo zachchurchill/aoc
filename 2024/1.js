@@ -4,7 +4,7 @@
 
 import fs from "node:fs";
 
-const data = fs.readFileSync("./input.txt", "utf8").trim();
+const data = fs.readFileSync("./inputs/1.txt", "utf8").trim();
 const locationIds = data.split("\n").map(line => line.split(/\s+/));
 
 const leftLocationIds = [];
