@@ -25,3 +25,30 @@ for (const report of reports) {
   }
 }
 console.log(`Part 1 answer: ${safeReports}`);
+
+// Part 2
+safeReports = 0;
+function isReportSafe(report) {
+  const diffs = [];
+  for (let i = 1; i < report.length; i++) {
+    diffs.push(report[i] - report[i-1]);
+  }
+  const allIncreasing = diffs.every(el => el > 0);
+  const allDecreasing = diffs.every(el => el < 0);
+  const withinAcceptableRange = diffs.every(rule2);
+  return (allIncreasing || allDecreasing) && withinAcceptableRange;
+}
+// Not proud of this but it worked
+for (const report of reports) {
+  if (isReportSafe(report)) {
+    safeReports += 1;
+  } else {
+    for (let i = 0; i < report.length; i++) {
+      if (isReportSafe([...report.slice(0, i), ...report.slice(i+1, report.length)])) {
+        safeReports += 1;
+        break;
+      }
+    }
+  }
+}
+console.log(`Part 2 answer: ${safeReports}`);
