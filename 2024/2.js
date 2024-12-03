@@ -1,4 +1,4 @@
-// Day 01
+// Day 02
 // https://adventofcode.com/2024/day/2
 "use strict";
 
